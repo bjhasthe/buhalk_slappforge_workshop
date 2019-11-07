@@ -50,9 +50,7 @@
         }
       }
     },
-    "deletedFiles": [
-      "buhalk_slappforge_workshop/lambda.js"
-    ],
+    "deletedFiles": [],
     "rootNode": "67786282-a856-4b20-9c75-988fe07506e3",
     "openFiles": [
       "40bdb655-2168-4631-811a-e2b13d5336a4"
@@ -96,7 +94,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1573109401607
+    "lastSave": 1573109636776
   },
   "VCS_STATE": {
     "provider": "GitHub",
