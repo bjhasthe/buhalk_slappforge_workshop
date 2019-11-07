@@ -1,0 +1,108 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "67786282-a856-4b20-9c75-988fe07506e3": {
+        "id": "67786282-a856-4b20-9c75-988fe07506e3",
+        "parent": null,
+        "name": "buhalk_slappforge_workshop",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "40bdb655-2168-4631-811a-e2b13d5336a4"
+        ],
+        "isRemovable": false,
+        "filePath": "buhalk_slappforge_workshop"
+      },
+      "40bdb655-2168-4631-811a-e2b13d5336a4": {
+        "id": "40bdb655-2168-4631-811a-e2b13d5336a4",
+        "parent": "67786282-a856-4b20-9c75-988fe07506e3",
+        "name": "buhalk_rekognizer.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "buhalk_slappforge_workshop/buhalk_rekognizer.js",
+        "code": "exports.handler = function(event, context, callback) {\n    //console.log(event);\n    //callback(null, {\"message\": \"Successfully executed\"});\n    console.log(JSON.stringify(event, null, 2));\n    callback(null, event);\n}",
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": [
+          {
+            "resourceName": "s3animalRecognitionBucket",
+            "config": {
+              "type": "s3:ObjectCreated:*",
+              "keyPrefix": "",
+              "keySuffix": ""
+            }
+          }
+        ],
+        "testCases": {
+          "c3ef088e-5574-445e-869d-308d8f63d7ff": {
+            "id": "c3ef088e-5574-445e-869d-308d8f63d7ff",
+            "name": "Test1",
+            "functionId": "40bdb655-2168-4631-811a-e2b13d5336a4",
+            "event": "{\n    \"key1\": \"value1\",\n    \"key2\": \"value2\",\n    \"key3\": \"value3\"\n}"
+          }
+        }
+      }
+    },
+    "deletedFiles": [
+      "buhalk_slappforge_workshop/lambda.js"
+    ],
+    "rootNode": "67786282-a856-4b20-9c75-988fe07506e3",
+    "openFiles": [
+      "40bdb655-2168-4631-811a-e2b13d5336a4"
+    ],
+    "currentFileId": "40bdb655-2168-4631-811a-e2b13d5336a4",
+    "resources": {
+      "s3animalRecognitionBucket": {
+        "name": "s3animalRecognitionBucket",
+        "type": "S3",
+        "config": {
+          "mode": 1,
+          "bucket": {
+            "region": "us-east-1",
+            "name": "animal-recognition-bucket"
+          }
+        }
+      }
+    },
+    "customTemplate": {
+      "dialect": null,
+      "definitions": {}
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {}
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "buhalk_slappforge_workshop",
+    "projectDescription": "SLAppFOrge Workshop",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "platformRegions": {},
+    "lastSave": 1573109401607
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "buhalk_slappforge_workshop",
+      "url": "https://github.com/bjhasthe/buhalk_slappforge_workshop"
+    }
+  }
+}
